@@ -1,3 +1,14 @@
+let caja=document.getElementById("ir-top");
+caja.addEventListener("click",function(){
+    document.documentElement.scrollTop=0;
+})
+window.addEventListener("scroll",function(){
+    if (document.documentElement.scrollTop > 300) {
+        caja.style.display="flex"
+    } else {
+        caja.style.display="none"
+    }
+})
 let ingreseUnNumero = parseInt(prompt("Ingrese un numero entre 1 y 10, ingrese 5 para detener el ciclo"));
 while (ingreseUnNumero != 5) {
     if (ingreseUnNumero >= 1 && ingreseUnNumero <= 10) {
